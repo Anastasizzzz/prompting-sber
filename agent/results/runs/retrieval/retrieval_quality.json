@@ -1,0 +1,68 @@
+[
+ {
+  "mode": "dense",
+  "year_filter": false,
+  "cases": 35,
+  "recall@1": 0.471,
+  "recall@3": 0.671,
+  "recall@5": 0.786,
+  "recall@8": 0.871,
+  "recall@15": 0.929,
+  "mrr": 0.627
+ },
+ {
+  "mode": "dense",
+  "year_filter": true,
+  "cases": 35,
+  "recall@1": 0.614,
+  "recall@3": 0.786,
+  "recall@5": 0.871,
+  "recall@8": 0.929,
+  "recall@15": 0.957,
+  "mrr": 0.735
+ },
+ {
+  "mode": "lexical",
+  "year_filter": false,
+  "cases": 35,
+  "recall@1": 0.6,
+  "recall@3": 0.671,
+  "recall@5": 0.7,
+  "recall@8": 0.7,
+  "recall@15": 0.729,
+  "mrr": 0.679
+ },
+ {
+  "mode": "lexical",
+  "year_filter": true,
+  "cases": 35,
+  "recall@1": 0.629,
+  "recall@3": 0.7,
+  "recall@5": 0.7,
+  "recall@8": 0.7,
+  "recall@15": 0.786,
+  "mrr": 0.705
+ },
+ {
+  "mode": "hybrid",
+  "year_filter": false,
+  "cases": 35,
+  "recall@1": 0.629,
+  "recall@3": 0.714,
+  "recall@5": 0.743,
+  "recall@8": 0.829,
+  "recall@15": 0.929,
+  "mrr": 0.723
+ },
+ {
+  "mode": "hybrid",
+  "year_filter": true,
+  "cases": 35,
+  "recall@1": 0.657,
+  "recall@3": 0.8,
+  "recall@5": 0.8,
+  "recall@8": 0.857,
+  "recall@15": 0.929,
+  "mrr": 0.762
+ }
+]

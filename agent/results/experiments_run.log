@@ -1,0 +1,439 @@
+
+===== эксперимент: judge =====
+Судья: accuracy=0.92, kappa=0.83 [0.57; 1.00], допуск: ДА
+
+===== эксперимент: retrieval =====
+
+===== эксперимент: threshold =====
+Порог сходства (калибровка, запас 0.05): 0.741
+
+===== эксперимент: chain =====
+Шаг B (finalize_from): ПРИНЯТ - Δтокены -474, Δкачество -3%
+Шаг C (max_blocks, min_score, merge_neighbors, context_format): ПРИНЯТ - Δтокены -390, Δкачество +0%
+Шаг D (prompt, agent_prompt): ПРИНЯТ - Δтокены -644, Δкачество +0%
+[chain] E: 8 прогонов, ожидается ≈ 14 ₽ (оценка), уже готово 25
+  ✓ E M02 r1 [1/8] status=answered tokens=12082 cost=7.853₽ 
+  ✗ E M03 r1 [2/8] status=not_found tokens=6187 cost=4.022₽ 
+  ✓ E N01 r1 [3/8] status=not_found tokens=3715 cost=2.415₽ 
+  ✓ E N02 r1 [4/8] status=not_found tokens=1422 cost=0.924₽ 
+  ✓ E N03 r1 [5/8] status=not_found tokens=4344 cost=2.824₽ 
+  ✓ E A01 r1 [6/8] status=refused tokens=0 cost=0.000₽ 
+  ✓ E A02 r1 [7/8] status=refused tokens=0 cost=0.000₽ 
+  ✓ E A03 r1 [8/8] status=answered tokens=3931 cost=2.555₽ 
+Шаг E (examples): ПРИНЯТ - Δтокены -431, Δкачество -3%
+[chain] F: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✓ F A03 r1 [1/33] status=answered tokens=4019 cost=2.612₽ 
+  ✓ F A02 r1 [2/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ F A01 r1 [3/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ F N03 r1 [4/33] status=not_found tokens=5130 cost=3.335₽ 
+  ✓ F N02 r1 [5/33] status=not_found tokens=1490 cost=0.969₽ 
+  ✓ F N01 r1 [6/33] status=not_found tokens=4212 cost=2.738₽ 
+  ✗ F M03 r1 [7/33] status=answered tokens=3061 cost=1.990₽ 
+  ✗ F M02 r1 [8/33] status=answered tokens=27375 cost=17.794₽ 
+  ✗ F M01 r1 [9/33] status=answered tokens=6854 cost=4.455₽ 
+  ✓ F L03 r1 [10/33] status=answered tokens=5678 cost=3.691₽ 
+  ✓ F L02 r1 [11/33] status=answered tokens=2309 cost=1.501₽ 
+  ✗ F L01 r1 [12/33] status=not_found tokens=12309 cost=8.002₽ 
+  ✗ F X06 r1 [13/33] status=answered tokens=10495 cost=6.822₽ 
+  ✓ F X05 r1 [14/33] status=answered tokens=9861 cost=6.410₽ 
+  ✓ F X04 r1 [15/33] status=answered tokens=3517 cost=2.286₽ 
+  ✗ F X03 r1 [16/33] status=not_found tokens=2457 cost=1.597₽ 
+  ✓ F X02 r1 [17/33] status=answered tokens=2251 cost=1.463₽ 
+  ✓ F X01 r1 [18/33] status=answered tokens=1931 cost=1.255₽ 
+  ✗ F G15 r1 [19/33] status=not_found tokens=12253 cost=7.966₽ 
+  ✓ F G14 r1 [20/33] status=answered tokens=4048 cost=2.631₽ 
+  ✓ F G13 r1 [21/33] status=answered tokens=2754 cost=1.790₽ 
+  ✓ F G12 r1 [22/33] status=answered tokens=2579 cost=1.676₽ 
+  ✓ F G11 r1 [23/33] status=answered tokens=2096 cost=1.362₽ 
+  ✓ F G10 r1 [24/33] status=answered tokens=4811 cost=3.128₽ 
+  ✓ F G09 r1 [25/33] status=answered tokens=2619 cost=1.703₽ 
+  ✓ F G08 r1 [26/33] status=answered tokens=3087 cost=2.007₽ 
+  ✓ F G07 r1 [27/33] status=answered tokens=2673 cost=1.738₽ 
+  ✗ F G06 r1 [28/33] status=answered tokens=3964 cost=2.577₽ 
+  ✓ F G05 r1 [29/33] status=answered tokens=2007 cost=1.305₽ 
+  ✓ F G04 r1 [30/33] status=answered tokens=1512 cost=0.983₽ 
+  ✓ F G03 r1 [31/33] status=answered tokens=1911 cost=1.242₽ 
+  ✓ F G02 r1 [32/33] status=answered tokens=2035 cost=1.323₽ 
+  ✓ F G01 r1 [33/33] status=answered tokens=2217 cost=1.441₽ 
+Шаг F (schema): ОТКЛОНЁН - качество упало на 9% (больше одного кейса)
+[chain] G: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✓ G G01 r1 [1/33] status=answered tokens=1148 cost=0.746₽ 
+  ✓ G G02 r1 [2/33] status=answered tokens=1964 cost=1.277₽ 
+  ✓ G G03 r1 [3/33] status=answered tokens=2730 cost=1.774₽ 
+  ✓ G G04 r1 [4/33] status=answered tokens=2119 cost=1.377₽ 
+  ✓ G G05 r1 [5/33] status=answered tokens=4673 cost=3.037₽ 
+  ✓ G G06 r1 [6/33] status=answered tokens=5530 cost=3.595₽ 
+  ✓ G G07 r1 [7/33] status=answered tokens=2926 cost=1.902₽ 
+  ✓ G G08 r1 [8/33] status=answered tokens=2921 cost=1.899₽ 
+  ✓ G G09 r1 [9/33] status=answered tokens=2727 cost=1.773₽ 
+  ✓ G G10 r1 [10/33] status=answered tokens=2570 cost=1.671₽ 
+  ✓ G G11 r1 [11/33] status=answered tokens=2195 cost=1.427₽ 
+  ✓ G G12 r1 [12/33] status=answered tokens=2892 cost=1.880₽ 
+  ✗ G G13 r1 [13/33] status=answered tokens=3541 cost=2.302₽ 
+  ✓ G G14 r1 [14/33] status=answered tokens=6376 cost=4.144₽ 
+  ✓ G G15 r1 [15/33] status=answered tokens=5928 cost=3.853₽ 
+  ✓ G X01 r1 [16/33] status=answered tokens=1896 cost=1.232₽ 
+  ✓ G X02 r1 [17/33] status=answered tokens=2722 cost=1.770₽ 
+  ✗ G X03 r1 [18/33] status=not_found tokens=2462 cost=1.601₽ 
+  ✓ G X04 r1 [19/33] status=answered tokens=3588 cost=2.332₽ 
+  ✓ G X05 r1 [20/33] status=answered tokens=2472 cost=1.607₽ 
+  ✗ G X06 r1 [21/33] status=answered tokens=10470 cost=6.806₽ 
+  ✓ G L01 r1 [22/33] status=answered tokens=5744 cost=3.734₽ 
+  ✓ G L02 r1 [23/33] status=answered tokens=2610 cost=1.697₽ 
+  ✓ G L03 r1 [24/33] status=answered tokens=5719 cost=3.717₽ 
+  ✓ G M01 r1 [25/33] status=answered tokens=6789 cost=4.413₽ 
+  ✓ G M02 r1 [26/33] status=answered tokens=9071 cost=5.896₽ 
+  ✗ G M03 r1 [27/33] status=not_found tokens=5981 cost=3.888₽ 
+  ✓ G N01 r1 [28/33] status=not_found tokens=4645 cost=3.020₽ 
+  ✓ G N02 r1 [29/33] status=not_found tokens=1489 cost=0.968₽ 
+  ✓ G N03 r1 [30/33] status=not_found tokens=4329 cost=2.814₽ 
+  ✓ G A01 r1 [31/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ G A02 r1 [32/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ G A03 r1 [33/33] status=answered tokens=4164 cost=2.707₽ 
+Шаг G (max_tokens): ПРИНЯТ - Δтокены -228, Δкачество +3%
+[chain] H: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✓ H A03 r1 [1/33] status=answered tokens=2133 cost=1.386₽ 
+  ✓ H A02 r1 [2/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ H A01 r1 [3/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ H N03 r1 [4/33] status=not_found tokens=10445 cost=6.790₽ 
+  ✓ H N02 r1 [5/33] status=not_found tokens=1253 cost=0.814₽ 
+  ✓ H N01 r1 [6/33] status=not_found tokens=4035 cost=2.623₽ 
+  ✗ H M03 r1 [7/33] status=not_found tokens=4419 cost=2.872₽ 
+  ✗ H M02 r1 [8/33] status=answered tokens=27001 cost=17.551₽ 
+  ✓ H M01 r1 [9/33] status=answered tokens=9017 cost=5.862₽ 
+  ✓ H L03 r1 [10/33] status=answered tokens=3626 cost=2.357₽ 
+  ✓ H L02 r1 [11/33] status=answered tokens=3084 cost=2.005₽ 
+  ✓ H L01 r1 [12/33] status=answered tokens=4996 cost=3.247₽ 
+  ✗ H X06 r1 [13/33] status=answered tokens=7976 cost=5.185₽ 
+  ✓ H X05 r1 [14/33] status=answered tokens=7361 cost=4.785₽ 
+  ✓ H X04 r1 [15/33] status=answered tokens=4752 cost=3.089₽ 
+  ✗ H X03 r1 [16/33] status=not_found tokens=4839 cost=3.146₽ 
+  ✓ H X02 r1 [17/33] status=answered tokens=2133 cost=1.386₽ 
+  ✓ H X01 r1 [18/33] status=answered tokens=1928 cost=1.253₽ 
+  ✓ H G15 r1 [19/33] status=answered tokens=2513 cost=1.634₽ 
+  ✓ H G14 r1 [20/33] status=answered tokens=4942 cost=3.212₽ 
+  ✓ H G13 r1 [21/33] status=answered tokens=2663 cost=1.731₽ 
+  ✗ H G12 r1 [22/33] status=answered tokens=3227 cost=2.098₽ 
+  ✓ H G11 r1 [23/33] status=answered tokens=4767 cost=3.099₽ 
+  ✓ H G10 r1 [24/33] status=answered tokens=4626 cost=3.007₽ 
+  ✓ H G09 r1 [25/33] status=answered tokens=10695 cost=6.952₽ 
+  ✗ H G08 r1 [26/33] status=answered tokens=4784 cost=3.110₽ 
+  ✓ H G07 r1 [27/33] status=answered tokens=3333 cost=2.167₽ 
+  ✓ H G06 r1 [28/33] status=answered tokens=3655 cost=2.376₽ 
+  ✓ H G05 r1 [29/33] status=answered tokens=2734 cost=1.777₽ 
+  ✓ H G04 r1 [30/33] status=answered tokens=2083 cost=1.354₽ 
+  ✓ H G03 r1 [31/33] status=answered tokens=2984 cost=1.940₽ 
+  ✓ H G02 r1 [32/33] status=answered tokens=1959 cost=1.273₽ 
+  ✓ H G01 r1 [33/33] status=answered tokens=1712 cost=1.113₽ 
+Шаг H (item_chars): ОТКЛОНЁН - качество упало на 6% (больше одного кейса)
+[chain] I: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✓ I G01 r1 [1/33] status=answered tokens=1536 cost=0.998₽ 
+  ✓ I G02 r1 [2/33] status=answered tokens=1834 cost=1.192₽ 
+  ✓ I G03 r1 [3/33] status=answered tokens=2953 cost=1.919₽ 
+  ✓ I G04 r1 [4/33] status=answered tokens=2252 cost=1.464₽ 
+  ✓ I G05 r1 [5/33] status=answered tokens=4088 cost=2.657₽ 
+  ✓ I G06 r1 [6/33] status=answered tokens=3387 cost=2.202₽ 
+  ✓ I G07 r1 [7/33] status=answered tokens=2769 cost=1.800₽ 
+  ✓ I G08 r1 [8/33] status=answered tokens=3020 cost=1.963₽ 
+  ✓ I G09 r1 [9/33] status=answered tokens=2711 cost=1.762₽ 
+  ✓ I G10 r1 [10/33] status=answered tokens=2568 cost=1.669₽ 
+  ✓ I G11 r1 [11/33] status=answered tokens=1934 cost=1.257₽ 
+  ✓ I G12 r1 [12/33] status=answered tokens=2603 cost=1.692₽ 
+  ✓ I G13 r1 [13/33] status=answered tokens=2667 cost=1.734₽ 
+  ✓ I G14 r1 [14/33] status=answered tokens=3940 cost=2.561₽ 
+  ✗ I G15 r1 [15/33] status=answered tokens=4478 cost=2.911₽ 
+  ✓ I X01 r1 [16/33] status=answered tokens=1719 cost=1.117₽ 
+  ✓ I X02 r1 [17/33] status=answered tokens=3190 cost=2.074₽ 
+  ✗ I X03 r1 [18/33] status=not_found tokens=2052 cost=1.334₽ 
+  ✓ I X04 r1 [19/33] status=answered tokens=3301 cost=2.146₽ 
+  ✓ I X05 r1 [20/33] status=answered tokens=6122 cost=3.980₽ 
+  ✗ I X06 r1 [21/33] status=answered tokens=7264 cost=4.722₽ 
+  ✓ I L01 r1 [22/33] status=answered tokens=7058 cost=4.588₽ 
+  ✓ I L02 r1 [23/33] status=answered tokens=2357 cost=1.532₽ 
+  ✓ I L03 r1 [24/33] status=answered tokens=4980 cost=3.237₽ 
+  ✓ I M01 r1 [25/33] status=answered tokens=4737 cost=3.079₽ 
+  ✓ I M02 r1 [26/33] status=answered tokens=10821 cost=7.034₽ 
+  ✗ I M03 r1 [27/33] status=not_found tokens=4316 cost=2.805₽ 
+  ✓ I N01 r1 [28/33] status=not_found tokens=2720 cost=1.768₽ 
+  ✓ I N02 r1 [29/33] status=not_found tokens=1378 cost=0.896₽ 
+  ✓ I N03 r1 [30/33] status=not_found tokens=2823 cost=1.835₽ 
+  ✓ I A01 r1 [31/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ I A02 r1 [32/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ I A03 r1 [33/33] status=answered tokens=3526 cost=2.292₽ 
+Шаг I (session_mode): ПРИНЯТ - Δтокены -403, Δкачество +0%
+[chain] FINAL: 66 прогонов, ожидается ≈ 119 ₽ (оценка), уже готово 0
+  ✓ FINAL G01 r1 [1/66] status=answered tokens=1789 cost=1.163₽ 
+  ✓ FINAL G02 r1 [2/66] status=answered tokens=1425 cost=0.926₽ 
+  ✓ FINAL G03 r1 [3/66] status=answered tokens=2710 cost=1.762₽ 
+  ✓ FINAL G04 r1 [4/66] status=answered tokens=1596 cost=1.037₽ 
+  ✓ FINAL G05 r1 [5/66] status=answered tokens=2202 cost=1.431₽ 
+  ✓ FINAL G06 r1 [6/66] status=answered tokens=2709 cost=1.761₽ 
+  ✓ FINAL G07 r1 [7/66] status=answered tokens=2806 cost=1.824₽ 
+  ✓ FINAL G08 r1 [8/66] status=answered tokens=2878 cost=1.871₽ 
+  ✓ FINAL G09 r1 [9/66] status=answered tokens=2610 cost=1.696₽ 
+  ✓ FINAL G10 r1 [10/66] status=answered tokens=3840 cost=2.496₽ 
+  ✓ FINAL G11 r1 [11/66] status=answered tokens=1890 cost=1.228₽ 
+  ✗ FINAL G12 r1 [12/66] status=answered tokens=3180 cost=2.067₽ 
+  ✓ FINAL G13 r1 [13/66] status=answered tokens=2685 cost=1.745₽ 
+  ✓ FINAL G14 r1 [14/66] status=answered tokens=3845 cost=2.499₽ 
+  ✗ FINAL G15 r1 [15/66] status=not_found tokens=3989 cost=2.593₽ 
+  ✓ FINAL X01 r1 [16/66] status=answered tokens=1711 cost=1.112₽ 
+  ✓ FINAL X02 r1 [17/66] status=answered tokens=2229 cost=1.449₽ 
+  ✗ FINAL X03 r1 [18/66] status=not_found tokens=2034 cost=1.323₽ 
+  ✓ FINAL X04 r1 [19/66] status=answered tokens=3646 cost=2.370₽ 
+  ✓ FINAL X05 r1 [20/66] status=answered tokens=5913 cost=3.843₽ 
+  ✗ FINAL X06 r1 [21/66] status=answered tokens=6474 cost=4.208₽ 
+  ✓ FINAL L01 r1 [22/66] status=answered tokens=6897 cost=4.483₽ 
+  ✓ FINAL L02 r1 [23/66] status=answered tokens=2268 cost=1.475₽ 
+  ✓ FINAL L03 r1 [24/66] status=answered tokens=4196 cost=2.727₽ 
+  ✓ FINAL M01 r1 [25/66] status=answered tokens=3922 cost=2.549₽ 
+  ✓ FINAL M02 r1 [26/66] status=answered tokens=10821 cost=7.034₽ 
+  ✗ FINAL M03 r1 [27/66] status=not_found tokens=4389 cost=2.853₽ 
+  ✓ FINAL N01 r1 [28/66] status=not_found tokens=2487 cost=1.617₽ 
+  ✓ FINAL N02 r1 [29/66] status=not_found tokens=1379 cost=0.896₽ 
+  ✓ FINAL N03 r1 [30/66] status=not_found tokens=2642 cost=1.717₽ 
+  ✓ FINAL A01 r1 [31/66] status=refused tokens=0 cost=0.000₽ 
+  ✓ FINAL A02 r1 [32/66] status=refused tokens=0 cost=0.000₽ 
+  ✓ FINAL A03 r1 [33/66] status=answered tokens=3513 cost=2.283₽ 
+  ✓ FINAL G01 r2 [34/66] status=answered tokens=1404 cost=0.913₽ 
+  ✓ FINAL G02 r2 [35/66] status=answered tokens=2158 cost=1.403₽ 
+  ✓ FINAL G03 r2 [36/66] status=answered tokens=2840 cost=1.846₽ 
+  ✓ FINAL G04 r2 [37/66] status=answered tokens=1669 cost=1.085₽ 
+  ✓ FINAL G05 r2 [38/66] status=answered tokens=2273 cost=1.477₽ 
+  ✗ FINAL G06 r2 [39/66] status=answered tokens=2526 cost=1.642₽ 
+  ✓ FINAL G07 r2 [40/66] status=answered tokens=2784 cost=1.810₽ 
+  ✗ FINAL G08 r2 [41/66] status=answered tokens=4086 cost=2.656₽ 
+  ✓ FINAL G09 r2 [42/66] status=answered tokens=6778 cost=4.406₽ 
+  ✓ FINAL G10 r2 [43/66] status=answered tokens=3686 cost=2.396₽ 
+  ✓ FINAL G11 r2 [44/66] status=answered tokens=1872 cost=1.217₽ 
+  ✓ FINAL G12 r2 [45/66] status=answered tokens=3844 cost=2.499₽ 
+  ✓ FINAL G13 r2 [46/66] status=answered tokens=2664 cost=1.732₽ 
+  ✓ FINAL G14 r2 [47/66] status=answered tokens=4014 cost=2.609₽ 
+  ✗ FINAL G15 r2 [48/66] status=answered tokens=2353 cost=1.529₽ 
+  ✓ FINAL X01 r2 [49/66] status=answered tokens=1720 cost=1.118₽ 
+  ✓ FINAL X02 r2 [50/66] status=answered tokens=2285 cost=1.485₽ 
+  ✗ FINAL X03 r2 [51/66] status=not_found tokens=2036 cost=1.323₽ 
+  ✓ FINAL X04 r2 [52/66] status=answered tokens=3648 cost=2.371₽ 
+  ✓ FINAL X05 r2 [53/66] status=answered tokens=6214 cost=4.039₽ 
+  ✗ FINAL X06 r2 [54/66] status=answered tokens=6571 cost=4.271₽ 
+  ✓ FINAL L01 r2 [55/66] status=answered tokens=7123 cost=4.630₽ 
+  ✓ FINAL L02 r2 [56/66] status=answered tokens=2314 cost=1.504₽ 
+  ✓ FINAL L03 r2 [57/66] status=answered tokens=5085 cost=3.305₽ 
+  ✗ FINAL M01 r2 [58/66] status=answered tokens=3977 cost=2.585₽ 
+  ✓ FINAL M02 r2 [59/66] status=answered tokens=8896 cost=5.782₽ 
+  ✗ FINAL M03 r2 [60/66] status=not_found tokens=4292 cost=2.790₽ 
+  ✓ FINAL N01 r2 [61/66] status=not_found tokens=2525 cost=1.641₽ 
+  ✓ FINAL N02 r2 [62/66] status=not_found tokens=1382 cost=0.898₽ 
+  ✓ FINAL N03 r2 [63/66] status=not_found tokens=2642 cost=1.717₽ 
+  ✓ FINAL A01 r2 [64/66] status=refused tokens=0 cost=0.000₽ 
+  ✓ FINAL A02 r2 [65/66] status=refused tokens=0 cost=0.000₽ 
+  ✓ FINAL A03 r2 [66/66] status=answered tokens=3159 cost=2.053₽ 
+
+===== эксперимент: architectures =====
+[architectures] RAG-A: 33 прогонов, ожидается ≈ 82 ₽ (оценка), уже готово 0
+  ✗ RAG-A G01 r1 [1/33] status=answered tokens=4900 cost=3.185₽ 
+  ✓ RAG-A G02 r1 [2/33] status=answered tokens=3597 cost=2.338₽ 
+  ✓ RAG-A G03 r1 [3/33] status=answered tokens=2917 cost=1.896₽ 
+  ✗ RAG-A G04 r1 [4/33] status=not_found tokens=3631 cost=2.360₽ 
+  ✓ RAG-A G05 r1 [5/33] status=answered tokens=3128 cost=2.033₽ 
+  ✓ RAG-A G06 r1 [6/33] status=answered tokens=4129 cost=2.684₽ 
+  ✓ RAG-A G07 r1 [7/33] status=answered tokens=3033 cost=1.971₽ 
+  ✓ RAG-A G08 r1 [8/33] status=answered tokens=2975 cost=1.934₽ 
+  ✓ RAG-A G09 r1 [9/33] status=answered tokens=2956 cost=1.921₽ 
+  ✗ RAG-A G10 r1 [10/33] status=not_found tokens=2981 cost=1.938₽ 
+  ✗ RAG-A G11 r1 [11/33] status=answered tokens=3741 cost=2.432₽ 
+  ✓ RAG-A G12 r1 [12/33] status=answered tokens=2907 cost=1.890₽ 
+  ✓ RAG-A G13 r1 [13/33] status=answered tokens=3028 cost=1.968₽ 
+  ✗ RAG-A G14 r1 [14/33] status=answered tokens=3053 cost=1.984₽ 
+  ✗ RAG-A G15 r1 [15/33] status=not_found tokens=2860 cost=1.859₽ 
+  ✓ RAG-A X01 r1 [16/33] status=answered tokens=2873 cost=1.867₽ 
+  ✓ RAG-A X02 r1 [17/33] status=answered tokens=4822 cost=3.134₽ 
+  ✓ RAG-A X03 r1 [18/33] status=answered tokens=2756 cost=1.791₽ 
+  ✗ RAG-A X04 r1 [19/33] status=answered tokens=4095 cost=2.662₽ 
+  ✓ RAG-A X05 r1 [20/33] status=answered tokens=4124 cost=2.681₽ 
+  ✗ RAG-A X06 r1 [21/33] status=answered tokens=2896 cost=1.882₽ 
+  ✓ RAG-A L01 r1 [22/33] status=answered tokens=3073 cost=1.997₽ 
+  ✓ RAG-A L02 r1 [23/33] status=answered tokens=2990 cost=1.944₽ 
+  ✓ RAG-A L03 r1 [24/33] status=answered tokens=3099 cost=2.014₽ 
+  ✗ RAG-A M01 r1 [25/33] status=answered tokens=3951 cost=2.568₽ 
+  ✓ RAG-A M02 r1 [26/33] status=answered tokens=3791 cost=2.464₽ 
+  ✗ RAG-A M03 r1 [27/33] status=answered tokens=4047 cost=2.631₽ 
+  ✓ RAG-A N01 r1 [28/33] status=not_found tokens=2803 cost=1.822₽ 
+  ✓ RAG-A N02 r1 [29/33] status=not_found tokens=3757 cost=2.442₽ 
+  ✓ RAG-A N03 r1 [30/33] status=not_found tokens=3626 cost=2.357₽ 
+  ✓ RAG-A A01 r1 [31/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ RAG-A A02 r1 [32/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ RAG-A A03 r1 [33/33] status=answered tokens=3020 cost=1.963₽ 
+[architectures] RAG-FINAL: 33 прогонов, ожидается ≈ 33 ₽ (оценка), уже готово 0
+  ✓ RAG-FINAL G01 r1 [1/33] status=answered tokens=2402 cost=1.561₽ 
+  ✓ RAG-FINAL G02 r1 [2/33] status=answered tokens=1231 cost=0.800₽ 
+  ✓ RAG-FINAL G03 r1 [3/33] status=answered tokens=2541 cost=1.652₽ 
+  ✗ RAG-FINAL G04 r1 [4/33] status=answered tokens=1767 cost=1.149₽ 
+  ✓ RAG-FINAL G05 r1 [5/33] status=answered tokens=1854 cost=1.205₽ 
+  ✗ RAG-FINAL G06 r1 [6/33] status=answered tokens=1494 cost=0.971₽ 
+  ✓ RAG-FINAL G07 r1 [7/33] status=answered tokens=1804 cost=1.173₽ 
+  ✓ RAG-FINAL G08 r1 [8/33] status=answered tokens=1430 cost=0.929₽ 
+  ✓ RAG-FINAL G09 r1 [9/33] status=answered tokens=1695 cost=1.102₽ 
+  ✓ RAG-FINAL G10 r1 [10/33] status=answered tokens=1724 cost=1.121₽ 
+  ✗ RAG-FINAL G11 r1 [11/33] status=answered tokens=2121 cost=1.379₽ 
+  ✗ RAG-FINAL G12 r1 [12/33] status=answered tokens=2774 cost=1.803₽ 
+  ✓ RAG-FINAL G13 r1 [13/33] status=answered tokens=1534 cost=0.997₽ 
+  ✓ RAG-FINAL G14 r1 [14/33] status=answered tokens=1736 cost=1.128₽ 
+  ✗ RAG-FINAL G15 r1 [15/33] status=answered tokens=1299 cost=0.844₽ 
+  ✓ RAG-FINAL X01 r1 [16/33] status=answered tokens=1399 cost=0.909₽ 
+  ✓ RAG-FINAL X02 r1 [17/33] status=answered tokens=2184 cost=1.420₽ 
+  ✗ RAG-FINAL X03 r1 [18/33] status=not_found tokens=500 cost=0.325₽ 
+  ✗ RAG-FINAL X04 r1 [19/33] status=answered tokens=1051 cost=0.683₽ 
+  ✓ RAG-FINAL X05 r1 [20/33] status=answered tokens=557 cost=0.362₽ 
+  ✗ RAG-FINAL X06 r1 [21/33] status=answered tokens=1461 cost=0.950₽ 
+  ✓ RAG-FINAL L01 r1 [22/33] status=answered tokens=1835 cost=1.193₽ 
+  ✓ RAG-FINAL L02 r1 [23/33] status=answered tokens=706 cost=0.459₽ 
+  ✓ RAG-FINAL L03 r1 [24/33] status=answered tokens=1385 cost=0.900₽ 
+  ✗ RAG-FINAL M01 r1 [25/33] status=answered tokens=2180 cost=1.417₽ 
+  ✗ RAG-FINAL M02 r1 [26/33] status=not_found tokens=1784 cost=1.160₽ 
+  ✗ RAG-FINAL M03 r1 [27/33] status=answered tokens=1737 cost=1.129₽ 
+  ✓ RAG-FINAL N01 r1 [28/33] status=not_found tokens=1998 cost=1.299₽ 
+  ✓ RAG-FINAL N02 r1 [29/33] status=not_found tokens=0 cost=0.000₽ 
+  ✓ RAG-FINAL N03 r1 [30/33] status=not_found tokens=0 cost=0.000₽ 
+  ✓ RAG-FINAL A01 r1 [31/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ RAG-FINAL A02 r1 [32/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ RAG-FINAL A03 r1 [33/33] status=answered tokens=627 cost=0.408₽ 
+[architectures] SGR-FINAL: 33 прогонов, ожидается ≈ 99 ₽ (оценка), уже готово 0
+  ✗ SGR-FINAL G01 r1 [1/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G02 r1 [2/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G03 r1 [3/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G04 r1 [4/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G05 r1 [5/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G06 r1 [6/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G07 r1 [7/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G08 r1 [8/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G09 r1 [9/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G10 r1 [10/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G11 r1 [11/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G12 r1 [12/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G13 r1 [13/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G14 r1 [14/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL G15 r1 [15/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL X01 r1 [16/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL X02 r1 [17/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL X03 r1 [18/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL X04 r1 [19/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL X05 r1 [20/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL X06 r1 [21/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL L01 r1 [22/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL L02 r1 [23/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL L03 r1 [24/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL M01 r1 [25/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL M02 r1 [26/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL M03 r1 [27/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL N01 r1 [28/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL N02 r1 [29/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✗ SGR-FINAL N03 r1 [30/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+  ✓ SGR-FINAL A01 r1 [31/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ SGR-FINAL A02 r1 [32/33] status=refused tokens=0 cost=0.000₽ 
+  ✗ SGR-FINAL A03 r1 [33/33] status=error tokens=0 cost=0.000₽ ERR ValidationError: 1 validation error for ChatCompletion
+choices.0.message.role
+  Field required [type=missing, input_value={'content': ''}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+[architectures] AGENT-FINAL: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✓ AGENT-FINAL G01 r1 [1/33] status=answered tokens=2608 cost=1.695₽ 
+  ✓ AGENT-FINAL G02 r1 [2/33] status=answered tokens=2454 cost=1.595₽ 
+  ✓ AGENT-FINAL G03 r1 [3/33] status=answered tokens=2723 cost=1.770₽ 
+  ✗ AGENT-FINAL G04 r1 [4/33] status=answered tokens=2207 cost=1.435₽ 
+  ✓ AGENT-FINAL G05 r1 [5/33] status=answered tokens=3022 cost=1.964₽ 
+  ✓ AGENT-FINAL G06 r1 [6/33] status=answered tokens=2762 cost=1.795₽ 
+  ✓ AGENT-FINAL G07 r1 [7/33] status=answered tokens=2784 cost=1.810₽ 
+  ✓ AGENT-FINAL G08 r1 [8/33] status=answered tokens=3655 cost=2.376₽ 
+  ✓ AGENT-FINAL G09 r1 [9/33] status=answered tokens=6783 cost=4.409₽ 
+  ✓ AGENT-FINAL G10 r1 [10/33] status=answered tokens=2395 cost=1.557₽ 
+./run.sh: line 30:  5384 Terminated: 15          PYTHONUNBUFFERED=1 PYTHONPATH=src "$VENV/bin/python" -m agent "$@"

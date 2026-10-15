@@ -1,0 +1,24 @@
+{"id": "b01", "group": "base", "question": "Каким по счёту был IT-завтрак на ПМЭФ-2016?", "ref": null, "expect_hit": null}
+{"id": "b02", "group": "base", "question": "Кто модерировал панель о кинематографе на ПМЭФ-2011?", "ref": null, "expect_hit": null}
+{"id": "b03", "group": "base", "question": "Сколько ядерных реакторов строилось в мире по данным Юкии Амано на ПМЭФ-2015?", "ref": null, "expect_hit": null}
+{"id": "b04", "group": "base", "question": "Сколько заявок в день обрабатывает Московская биржа по словам Александра Афанасьева?", "ref": null, "expect_hit": null}
+{"id": "b05", "group": "base", "question": "Кто представлял Hyperloop Transportation Technologies на сессии об инфраструктуре ПМЭФ-2016?", "ref": null, "expect_hit": null}
+{"id": "b06", "group": "base", "question": "Во сколько оценил выгоды Арктики Чарлз Робертсон?", "ref": null, "expect_hit": null}
+{"id": "b07", "group": "base", "question": "Какую должность занимал Олег Бударгин на ПМЭФ-2013?", "ref": null, "expect_hit": null}
+{"id": "b08", "group": "base", "question": "Сколько минут отводится спикеру на IT-завтраке?", "ref": null, "expect_hit": null}
+{"id": "p01", "group": "paraphrase", "question": "Какой номер по порядку имел IT-завтрак ПМЭФ-2016?", "ref": "b01", "expect_hit": true}
+{"id": "p02", "group": "paraphrase", "question": "Кто был модератором дискуссии о кино на ПМЭФ-2011?", "ref": "b02", "expect_hit": true}
+{"id": "p03", "group": "paraphrase", "question": "По словам Юкии Амано на ПМЭФ-2015, сколько реакторов находилось в стадии строительства?", "ref": "b03", "expect_hit": true}
+{"id": "p04", "group": "paraphrase", "question": "Какое число заявок ежедневно проходит через Московскую биржу, по данным Александра Афанасьева?", "ref": "b04", "expect_hit": true}
+{"id": "p05", "group": "paraphrase", "question": "Кто выступал от Hyperloop Transportation Technologies на инфраструктурной сессии ПМЭФ-2016?", "ref": "b05", "expect_hit": true}
+{"id": "p06", "group": "paraphrase", "question": "Какую сумму выгод от освоения Арктики назвал Чарлз Робертсон?", "ref": "b06", "expect_hit": true}
+{"id": "p07", "group": "paraphrase", "question": "Кем работал Олег Бударгин во время ПМЭФ-2013?", "ref": "b07", "expect_hit": true}
+{"id": "p08", "group": "paraphrase", "question": "Сколько времени даётся каждому выступающему на IT-завтраке?", "ref": "b08", "expect_hit": true}
+{"id": "t01", "group": "trap", "question": "Каким по счёту был IT-завтрак на ПМЭФ-2014?", "ref": "b01", "expect_hit": false}
+{"id": "t02", "group": "trap", "question": "Кто модерировал панель о кинематографе на ПМЭФ-2012?", "ref": "b02", "expect_hit": false}
+{"id": "t03", "group": "trap", "question": "Сколько ядерных реакторов работало в мире по данным Юкии Амано на ПМЭФ-2015?", "ref": "b03", "expect_hit": false}
+{"id": "t04", "group": "trap", "question": "Сколько сделок в день заключается на Московской бирже по словам Александра Афанасьева?", "ref": "b04", "expect_hit": false}
+{"id": "t05", "group": "trap", "question": "Кто модерировал сессию о Hyperloop на ПМЭФ-2016?", "ref": "b05", "expect_hit": false}
+{"id": "t06", "group": "trap", "question": "Во сколько оценил выгоды Арктики Александр Цыбульский?", "ref": "b06", "expect_hit": false}
+{"id": "t07", "group": "trap", "question": "Какую должность занимал Олег Бударгин на ПМЭФ-2016?", "ref": "b07", "expect_hit": false}
+{"id": "t08", "group": "trap", "question": "Сколько минут отводится спикеру на панели о кибербезопасности?", "ref": "b08", "expect_hit": false}

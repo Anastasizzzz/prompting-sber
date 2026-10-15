@@ -1,0 +1,182 @@
+{
+ "rows": [
+  {
+   "ключ": "только смысл",
+   "порог": 0.85,
+   "попаданий": 15,
+   "ложных": 7,
+   "доля попаданий на перефразах": 1.0,
+   "точность попаданий": 0.53
+  },
+  {
+   "ключ": "только смысл",
+   "порог": 0.9,
+   "попаданий": 15,
+   "ложных": 7,
+   "доля попаданий на перефразах": 1.0,
+   "точность попаданий": 0.53
+  },
+  {
+   "ключ": "только смысл",
+   "порог": 0.93,
+   "попаданий": 10,
+   "ложных": 4,
+   "доля попаданий на перефразах": 0.75,
+   "точность попаданий": 0.6
+  },
+  {
+   "ключ": "только смысл",
+   "порог": 0.95,
+   "попаданий": 8,
+   "ложных": 4,
+   "доля попаданий на перефразах": 0.5,
+   "точность попаданий": 0.5
+  },
+  {
+   "ключ": "только смысл",
+   "порог": 0.97,
+   "попаданий": 6,
+   "ложных": 4,
+   "доля попаданий на перефразах": 0.25,
+   "точность попаданий": 0.33
+  },
+  {
+   "ключ": "гибридный",
+   "порог": 0.85,
+   "попаданий": 6,
+   "ложных": 1,
+   "доля попаданий на перефразах": 0.62,
+   "точность попаданий": 0.83
+  },
+  {
+   "ключ": "гибридный",
+   "порог": 0.9,
+   "попаданий": 6,
+   "ложных": 1,
+   "доля попаданий на перефразах": 0.62,
+   "точность попаданий": 0.83
+  },
+  {
+   "ключ": "гибридный",
+   "порог": 0.93,
+   "попаданий": 5,
+   "ложных": 1,
+   "доля попаданий на перефразах": 0.5,
+   "точность попаданий": 0.8
+  },
+  {
+   "ключ": "гибридный",
+   "порог": 0.95,
+   "попаданий": 3,
+   "ложных": 1,
+   "доля попаданий на перефразах": 0.25,
+   "точность попаданий": 0.67
+  },
+  {
+   "ключ": "гибридный",
+   "порог": 0.97,
+   "попаданий": 2,
+   "ложных": 1,
+   "доля попаданий на перефразах": 0.12,
+   "точность попаданий": 0.5
+  }
+ ],
+ "similarities": [
+  {
+   "id": "p01",
+   "group": "paraphrase",
+   "similarity_to_base": 0.923,
+   "discriminators_equal": true
+  },
+  {
+   "id": "p02",
+   "group": "paraphrase",
+   "similarity_to_base": 0.972,
+   "discriminators_equal": false
+  },
+  {
+   "id": "p03",
+   "group": "paraphrase",
+   "similarity_to_base": 0.915,
+   "discriminators_equal": false
+  },
+  {
+   "id": "p04",
+   "group": "paraphrase",
+   "similarity_to_base": 0.959,
+   "discriminators_equal": false
+  },
+  {
+   "id": "p05",
+   "group": "paraphrase",
+   "similarity_to_base": 0.981,
+   "discriminators_equal": true
+  },
+  {
+   "id": "p06",
+   "group": "paraphrase",
+   "similarity_to_base": 0.939,
+   "discriminators_equal": true
+  },
+  {
+   "id": "p07",
+   "group": "paraphrase",
+   "similarity_to_base": 0.967,
+   "discriminators_equal": true
+  },
+  {
+   "id": "p08",
+   "group": "paraphrase",
+   "similarity_to_base": 0.945,
+   "discriminators_equal": true
+  },
+  {
+   "id": "t01",
+   "group": "trap",
+   "similarity_to_base": 0.999,
+   "discriminators_equal": false
+  },
+  {
+   "id": "t02",
+   "group": "trap",
+   "similarity_to_base": 0.999,
+   "discriminators_equal": false
+  },
+  {
+   "id": "t03",
+   "group": "trap",
+   "similarity_to_base": 0.976,
+   "discriminators_equal": true
+  },
+  {
+   "id": "t04",
+   "group": "trap",
+   "similarity_to_base": 0.929,
+   "discriminators_equal": false
+  },
+  {
+   "id": "t05",
+   "group": "trap",
+   "similarity_to_base": 0.902,
+   "discriminators_equal": false
+  },
+  {
+   "id": "t06",
+   "group": "trap",
+   "similarity_to_base": 0.804,
+   "discriminators_equal": false
+  },
+  {
+   "id": "t07",
+   "group": "trap",
+   "similarity_to_base": 0.995,
+   "discriminators_equal": false
+  },
+  {
+   "id": "t08",
+   "group": "trap",
+   "similarity_to_base": 0.904,
+   "discriminators_equal": false
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "PREFIX-STABLE": {
+  "cases": 5,
+  "raw_input_tokens": 28955,
+  "precached_tokens": 21645,
+  "cached_share": 0.748,
+  "billed_tokens": 9448,
+  "cost_rub": 6.1417
+ },
+ "PREFIX-TIMESTAMP": {
+  "cases": 5,
+  "raw_input_tokens": 29185,
+  "precached_tokens": 11713,
+  "cached_share": 0.401,
+  "billed_tokens": 19639,
+  "cost_rub": 12.7654
+ }
+}

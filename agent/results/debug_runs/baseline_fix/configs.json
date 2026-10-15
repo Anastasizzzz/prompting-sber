@@ -1,0 +1,32 @@
+{
+ "A": {
+  "config_id": "A",
+  "name": "A: baseline - агент, подробные промпты, финал по всей истории",
+  "architecture": "agent",
+  "model": "GigaChat-2-Max",
+  "retrieval_mode": "dense",
+  "top_k": 8,
+  "max_blocks": 12,
+  "min_score": null,
+  "merge_neighbors": false,
+  "auto_year_filter": false,
+  "planner": false,
+  "context_format": "verbose",
+  "prompt": "verbose",
+  "examples": 3,
+  "schema": "verbose",
+  "max_tokens": 1024,
+  "temperature": 0.01,
+  "max_attempts": 2,
+  "sc_samples": 1,
+  "agent_prompt": "verbose",
+  "tool_variant": "detailed",
+  "max_steps": 6,
+  "item_chars": 1000,
+  "agent_max_tokens": 300,
+  "finalize_from": "history",
+  "compaction": null,
+  "session_mode": "fresh",
+  "timestamp_in_prefix": false
+ }
+}

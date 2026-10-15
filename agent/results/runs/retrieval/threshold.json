@@ -1,0 +1,34 @@
+{
+ "threshold": 0.741,
+ "margin": 0.05,
+ "calibration_scores": [
+  {
+   "case_id": "C01",
+   "best_relevant_score": 0.815688967704773
+  },
+  {
+   "case_id": "C02",
+   "best_relevant_score": 0.7910579442977905
+  },
+  {
+   "case_id": "C03",
+   "best_relevant_score": 0.8538908958435059
+  },
+  {
+   "case_id": "C04",
+   "best_relevant_score": 0.8154836893081665
+  },
+  {
+   "case_id": "C05",
+   "best_relevant_score": 0.8544337749481201
+  },
+  {
+   "case_id": "C06",
+   "best_relevant_score": 0.8559683561325073
+  },
+  {
+   "case_id": "C08",
+   "best_relevant_score": 0.7908506393432617
+  }
+ ]
+}

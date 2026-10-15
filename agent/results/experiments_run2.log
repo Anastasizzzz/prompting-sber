@@ -1,0 +1,194 @@
+
+===== эксперимент: judge =====
+Судья: accuracy=0.92, kappa=0.83 [0.57; 1.00], допуск: ДА
+
+===== эксперимент: retrieval =====
+
+===== эксперимент: threshold =====
+Порог сходства (калибровка, запас 0.05): 0.741
+
+===== эксперимент: chain =====
+Шаг B (finalize_from): ПРИНЯТ - Δтокены -474, Δкачество -3%
+[chain] C: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✓ C G01 r1 [1/33] status=answered tokens=5077 cost=3.300₽ 
+  ✓ C G02 r1 [2/33] status=answered tokens=3829 cost=2.489₽ 
+  ✓ C G03 r1 [3/33] status=answered tokens=2292 cost=1.490₽ 
+  ✓ C G04 r1 [4/33] status=answered tokens=2207 cost=1.435₽ 
+  ✓ C G05 r1 [5/33] status=answered tokens=2369 cost=1.540₽ 
+  ✓ C G06 r1 [6/33] status=answered tokens=3089 cost=2.008₽ 
+  ✓ C G07 r1 [7/33] status=answered tokens=4028 cost=2.618₽ 
+  ✗ C G08 r1 [8/33] status=not_found tokens=5313 cost=3.454₽ 
+  ✓ C G09 r1 [9/33] status=answered tokens=15499 cost=10.075₽ 
+  ✓ C G10 r1 [10/33] status=answered tokens=5234 cost=3.402₽ 
+  ✓ C G11 r1 [11/33] status=answered tokens=3312 cost=2.153₽ 
+  ✓ C G12 r1 [12/33] status=answered tokens=2873 cost=1.867₽ 
+  ✓ C G13 r1 [13/33] status=answered tokens=2759 cost=1.793₽ 
+  ✓ C G14 r1 [14/33] status=answered tokens=3891 cost=2.529₽ 
+  ✓ C G15 r1 [15/33] status=answered tokens=6035 cost=3.923₽ 
+  ✓ C X01 r1 [16/33] status=answered tokens=1812 cost=1.178₽ 
+  ✓ C X02 r1 [17/33] status=answered tokens=2292 cost=1.490₽ 
+  ✓ C X03 r1 [18/33] status=answered tokens=10344 cost=6.724₽ 
+  ✓ C X04 r1 [19/33] status=answered tokens=3711 cost=2.412₽ 
+  ✓ C X05 r1 [20/33] status=answered tokens=10213 cost=6.638₽ 
+  ✗ C X06 r1 [21/33] status=answered tokens=10939 cost=7.110₽ 
+  ✓ C L01 r1 [22/33] status=answered tokens=7893 cost=5.130₽ 
+  ✓ C L02 r1 [23/33] status=answered tokens=2678 cost=1.741₽ 
+  ✓ C L03 r1 [24/33] status=answered tokens=6142 cost=3.992₽ 
+  ✓ C M01 r1 [25/33] status=answered tokens=21628 cost=14.058₽ 
+  ✓ C M02 r1 [26/33] status=answered tokens=8938 cost=5.810₽ 
+  ✓ C M03 r1 [27/33] status=answered tokens=6849 cost=4.452₽ 
+  ✓ C N01 r1 [28/33] status=not_found tokens=4159 cost=2.704₽ 
+  ✓ C N02 r1 [29/33] status=not_found tokens=1381 cost=0.898₽ 
+  ✓ C N03 r1 [30/33] status=not_found tokens=5262 cost=3.420₽ 
+  ✓ C A01 r1 [31/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ C A02 r1 [32/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ C A03 r1 [33/33] status=answered tokens=4232 cost=2.751₽ 
+Шаг C (max_blocks, min_score, merge_neighbors, context_format): ПРИНЯТ - Δтокены -121, Δкачество +6%
+[chain] D: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✓ D A03 r1 [1/33] status=answered tokens=7764 cost=5.047₽ 
+  ✓ D A02 r1 [2/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ D A01 r1 [3/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ D N03 r1 [4/33] status=not_found tokens=2643 cost=1.718₽ 
+  ✓ D N02 r1 [5/33] status=not_found tokens=1380 cost=0.897₽ 
+  ✓ D N01 r1 [6/33] status=not_found tokens=6392 cost=4.155₽ 
+  ✗ D M03 r1 [7/33] status=answered tokens=6405 cost=4.163₽ 
+  ✓ D M02 r1 [8/33] status=answered tokens=8519 cost=5.537₽ 
+  ✗ D M01 r1 [9/33] status=answered tokens=6958 cost=4.523₽ 
+  ✓ D L03 r1 [10/33] status=answered tokens=5836 cost=3.793₽ 
+  ✓ D L02 r1 [11/33] status=answered tokens=2427 cost=1.578₽ 
+  ✓ D L01 r1 [12/33] status=answered tokens=11076 cost=7.199₽ 
+  ✗ D X06 r1 [13/33] status=answered tokens=10461 cost=6.800₽ 
+  ✓ D X05 r1 [14/33] status=answered tokens=10133 cost=6.586₽ 
+  ✓ D X04 r1 [15/33] status=answered tokens=4332 cost=2.816₽ 
+  ✗ D X03 r1 [16/33] status=not_found tokens=2668 cost=1.734₽ 
+  ✓ D X02 r1 [17/33] status=answered tokens=2765 cost=1.797₽ 
+  ✓ D X01 r1 [18/33] status=answered tokens=1877 cost=1.220₽ 
+  ✓ D G15 r1 [19/33] status=answered tokens=5508 cost=3.580₽ 
+  ✓ D G14 r1 [20/33] status=answered tokens=5322 cost=3.459₽ 
+  ✓ D G13 r1 [21/33] status=answered tokens=2925 cost=1.901₽ 
+  ✓ D G12 r1 [22/33] status=answered tokens=2833 cost=1.841₽ 
+  ✓ D G11 r1 [23/33] status=answered tokens=2226 cost=1.447₽ 
+  ✓ D G10 r1 [24/33] status=answered tokens=5203 cost=3.382₽ 
+  ✓ D G09 r1 [25/33] status=answered tokens=3258 cost=2.118₽ 
+  ✗ D G08 r1 [26/33] status=answered tokens=5657 cost=3.677₽ 
+  ✓ D G07 r1 [27/33] status=answered tokens=3100 cost=2.016₽ 
+  ✓ D G06 r1 [28/33] status=answered tokens=2797 cost=1.818₽ 
+  ✓ D G05 r1 [29/33] status=answered tokens=2439 cost=1.585₽ 
+  ✓ D G04 r1 [30/33] status=answered tokens=1901 cost=1.236₽ 
+  ✓ D G03 r1 [31/33] status=answered tokens=2288 cost=1.487₽ 
+  ✓ D G02 r1 [32/33] status=answered tokens=1829 cost=1.189₽ 
+  ✓ D G01 r1 [33/33] status=answered tokens=2072 cost=1.347₽ 
+Шаг D (prompt, agent_prompt): ОТКЛОНЁН - качество упало на 9% (больше одного кейса)
+[chain] E: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✗ E G01 r1 [1/33] status=answered tokens=3231 cost=2.100₽ 
+  ✓ E G02 r1 [2/33] status=answered tokens=1437 cost=0.934₽ 
+  ✓ E G03 r1 [3/33] status=answered tokens=3450 cost=2.243₽ 
+  ✓ E G04 r1 [4/33] status=answered tokens=1924 cost=1.251₽ 
+  ✓ E G05 r1 [5/33] status=answered tokens=2463 cost=1.601₽ 
+  ✓ E G06 r1 [6/33] status=answered tokens=2981 cost=1.938₽ 
+  ✓ E G07 r1 [7/33] status=answered tokens=3412 cost=2.218₽ 
+  ✗ E G08 r1 [8/33] status=answered tokens=4232 cost=2.751₽ 
+  ✓ E G09 r1 [9/33] status=answered tokens=15690 cost=10.198₽ 
+  ✓ E G10 r1 [10/33] status=answered tokens=2437 cost=1.584₽ 
+  ✓ E G11 r1 [11/33] status=answered tokens=1884 cost=1.225₽ 
+  ✓ E G12 r1 [12/33] status=answered tokens=2789 cost=1.813₽ 
+  ✓ E G13 r1 [13/33] status=answered tokens=2702 cost=1.756₽ 
+  ✓ E G14 r1 [14/33] status=answered tokens=3998 cost=2.599₽ 
+  ✓ E G15 r1 [15/33] status=answered tokens=4805 cost=3.123₽ 
+  ✓ E X01 r1 [16/33] status=answered tokens=2030 cost=1.319₽ 
+  ✓ E X02 r1 [17/33] status=answered tokens=2247 cost=1.461₽ 
+  ✗ E X03 r1 [18/33] status=not_found tokens=2880 cost=1.872₽ 
+  ✓ E X04 r1 [19/33] status=answered tokens=4327 cost=2.813₽ 
+  ✓ E X05 r1 [20/33] status=answered tokens=2214 cost=1.439₽ 
+  ✗ E X06 r1 [21/33] status=answered tokens=9894 cost=6.431₽ 
+  ✓ E L01 r1 [22/33] status=answered tokens=9662 cost=6.280₽ 
+  ✓ E L02 r1 [23/33] status=answered tokens=2667 cost=1.734₽ 
+  ✓ E L03 r1 [24/33] status=answered tokens=5991 cost=3.894₽ 
+  ✗ E M01 r1 [25/33] status=answered tokens=19311 cost=12.552₽ 
+  ✓ E M02 r1 [26/33] status=answered tokens=7635 cost=4.963₽ 
+  ✓ E M03 r1 [27/33] status=answered tokens=15606 cost=10.144₽ 
+  ✓ E N01 r1 [28/33] status=not_found tokens=5379 cost=3.496₽ 
+  ✓ E N02 r1 [29/33] status=not_found tokens=1492 cost=0.970₽ 
+  ✓ E N03 r1 [30/33] status=not_found tokens=6473 cost=4.207₽ 
+  ✓ E A01 r1 [31/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ E A02 r1 [32/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ E A03 r1 [33/33] status=answered tokens=4559 cost=2.964₽ 
+Шаг E (examples): ОТКЛОНЁН - качество упало на 9% (больше одного кейса)
+[chain] F: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✓ F A03 r1 [1/33] status=answered tokens=3844 cost=2.499₽ 
+  ✓ F A02 r1 [2/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ F A01 r1 [3/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ F N03 r1 [4/33] status=not_found tokens=2946 cost=1.915₽ 
+  ✓ F N02 r1 [5/33] status=not_found tokens=2969 cost=1.930₽ 
+  ✓ F N01 r1 [6/33] status=not_found tokens=4455 cost=2.896₽ 
+  ✗ F M03 r1 [7/33] status=answered tokens=3574 cost=2.323₽ 
+  ✓ F M02 r1 [8/33] status=answered tokens=7563 cost=4.916₽ 
+  ✓ F M01 r1 [9/33] status=answered tokens=29122 cost=18.929₽ 
+  ✓ F L03 r1 [10/33] status=answered tokens=4228 cost=2.748₽ 
+  ✓ F L02 r1 [11/33] status=answered tokens=3188 cost=2.072₽ 
+  ✓ F L01 r1 [12/33] status=answered tokens=5652 cost=3.674₽ 
+  ✗ F X06 r1 [13/33] status=answered tokens=8136 cost=5.288₽ 
+  ✓ F X05 r1 [14/33] status=answered tokens=10254 cost=6.665₽ 
+  ✓ F X04 r1 [15/33] status=answered tokens=4635 cost=3.013₽ 
+  ✗ F X03 r1 [16/33] status=not_found tokens=2824 cost=1.836₽ 
+  ✓ F X02 r1 [17/33] status=answered tokens=12251 cost=7.963₽ 
+  ✓ F X01 r1 [18/33] status=answered tokens=2100 cost=1.365₽ 
+  ✓ F G15 r1 [19/33] status=answered tokens=4594 cost=2.987₽ 
+  ✓ F G14 r1 [20/33] status=answered tokens=5205 cost=3.383₽ 
+  ✓ F G13 r1 [21/33] status=answered tokens=2671 cost=1.736₽ 
+  ✓ F G12 r1 [22/33] status=answered tokens=2666 cost=1.733₽ 
+  ✓ F G11 r1 [23/33] status=answered tokens=1943 cost=1.263₽ 
+  ✓ F G10 r1 [24/33] status=answered tokens=2467 cost=1.604₽ 
+  ✓ F G09 r1 [25/33] status=answered tokens=14682 cost=9.543₽ 
+  ✓ F G08 r1 [26/33] status=answered tokens=4500 cost=2.925₽ 
+  ✓ F G07 r1 [27/33] status=answered tokens=11143 cost=7.244₽ 
+  ✓ F G06 r1 [28/33] status=answered tokens=2968 cost=1.929₽ 
+  ✓ F G05 r1 [29/33] status=answered tokens=2417 cost=1.571₽ 
+  ✓ F G04 r1 [30/33] status=answered tokens=1991 cost=1.294₽ 
+  ✓ F G03 r1 [31/33] status=answered tokens=2219 cost=1.442₽ 
+  ✓ F G02 r1 [32/33] status=answered tokens=1741 cost=1.132₽ 
+  ✗ F G01 r1 [33/33] status=answered tokens=2586 cost=1.681₽ 
+Шаг F (schema): ОТКЛОНЁН - качество упало на 6% (больше одного кейса)
+[chain] G: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✓ G G01 r1 [1/33] status=answered tokens=1640 cost=1.066₽ 
+  ✓ G G02 r1 [2/33] status=answered tokens=2394 cost=1.556₽ 
+  ✓ G G03 r1 [3/33] status=answered tokens=2872 cost=1.867₽ 
+  ✓ G G04 r1 [4/33] status=answered tokens=1795 cost=1.167₽ 
+  ✓ G G05 r1 [5/33] status=answered tokens=4686 cost=3.046₽ 
+  ✓ G G06 r1 [6/33] status=answered tokens=2892 cost=1.880₽ 
+  ✓ G G07 r1 [7/33] status=answered tokens=2736 cost=1.778₽ 
+  ✓ G G08 r1 [8/33] status=answered tokens=3006 cost=1.954₽ 
+  ✓ G G09 r1 [9/33] status=answered tokens=12036 cost=7.823₽ 
+  ✗ G G10 r1 [10/33] status=not_found tokens=15730 cost=10.226₽ 
+  ✓ G G11 r1 [11/33] status=answered tokens=2231 cost=1.450₽ 
+  ✓ G G12 r1 [12/33] status=answered tokens=2835 cost=1.843₽ 
+  ✗ G G13 r1 [13/33] status=answered tokens=3101 cost=2.016₽ 
+  ✓ G G14 r1 [14/33] status=answered tokens=3775 cost=2.454₽ 
+  ✓ G G15 r1 [15/33] status=answered tokens=9178 cost=5.966₽ 
+  ✓ G X01 r1 [16/33] status=answered tokens=1801 cost=1.171₽ 
+  ✓ G X02 r1 [17/33] status=answered tokens=6152 cost=3.999₽ 
+  ✗ G X03 r1 [18/33] status=not_found tokens=2763 cost=1.796₽ 
+  ✓ G X04 r1 [19/33] status=answered tokens=4211 cost=2.737₽ 
+  ✓ G X05 r1 [20/33] status=answered tokens=8913 cost=5.793₽ 
+  ✗ G X06 r1 [21/33] status=answered tokens=5333 cost=3.466₽ 
+  ✓ G L01 r1 [22/33] status=answered tokens=11194 cost=7.276₽ 
+  ✓ G L02 r1 [23/33] status=answered tokens=2490 cost=1.619₽ 
+  ✓ G L03 r1 [24/33] status=answered tokens=6858 cost=4.458₽ 
+  ✓ G M01 r1 [25/33] status=answered tokens=16087 cost=10.457₽ 
+  ✓ G M02 r1 [26/33] status=answered tokens=22858 cost=14.858₽ 
+  ✗ G M03 r1 [27/33] status=answered tokens=3649 cost=2.372₽ 
+  ✓ G N01 r1 [28/33] status=not_found tokens=5372 cost=3.492₽ 
+  ✓ G N02 r1 [29/33] status=not_found tokens=1485 cost=0.965₽ 
+  ✓ G N03 r1 [30/33] status=not_found tokens=5269 cost=3.425₽ 
+  ✓ G A01 r1 [31/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ G A02 r1 [32/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ G A03 r1 [33/33] status=answered tokens=4472 cost=2.907₽ 
+Шаг G (max_tokens): ОТКЛОНЁН - качество упало на 9% (больше одного кейса)
+[chain] H: 33 прогонов, ожидается ≈ 59 ₽ (оценка), уже готово 0
+  ✓ H A03 r1 [1/33] status=answered tokens=2635 cost=1.713₽ 
+  ✓ H A02 r1 [2/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ H A01 r1 [3/33] status=refused tokens=0 cost=0.000₽ 
+  ✓ H N03 r1 [4/33] status=not_found tokens=4583 cost=2.979₽ 
+  ✓ H N02 r1 [5/33] status=not_found tokens=1227 cost=0.798₽ 
+  ✓ H N01 r1 [6/33] status=not_found tokens=3427 cost=2.228₽ 
+./run.sh: line 30:  9998 Terminated: 15          PYTHONUNBUFFERED=1 PYTHONPATH=src "$VENV/bin/python" -m agent "$@"

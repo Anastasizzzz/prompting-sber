@@ -1,0 +1,32 @@
+{
+ "FINAL-MINTOOLS": {
+  "config_id": "FINAL-MINTOOLS",
+  "name": "итоговая + минимальные описания функций",
+  "architecture": "agent",
+  "model": "GigaChat-2-Max",
+  "retrieval_mode": "dense",
+  "top_k": 8,
+  "max_blocks": 4,
+  "min_score": 0.741,
+  "merge_neighbors": true,
+  "auto_year_filter": false,
+  "planner": false,
+  "context_format": "compact",
+  "prompt": "verbose",
+  "examples": 3,
+  "schema": "verbose",
+  "max_tokens": 1024,
+  "temperature": 0.01,
+  "max_attempts": 2,
+  "sc_samples": 1,
+  "agent_prompt": "verbose",
+  "tool_variant": "minimal",
+  "max_steps": 6,
+  "item_chars": 1000,
+  "agent_max_tokens": 300,
+  "finalize_from": "state",
+  "compaction": null,
+  "session_mode": "shared",
+  "timestamp_in_prefix": false
+ }
+}

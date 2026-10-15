@@ -1,0 +1,62 @@
+{
+ "RAG-FINAL": {
+  "config_id": "RAG-FINAL",
+  "cases": 33,
+  "rows": 33,
+  "status_accuracy": 0.9090909090909091,
+  "contract_pass_rate": 0.7575757575757576,
+  "contract_pass_ci": [
+   0.6060606060606061,
+   0.8787878787878788
+  ],
+  "valid_rate": 0.9285714285714286,
+  "required_fact_recall": 0.8214285714285713,
+  "forbidden_fact_rate": 0.0,
+  "faithfulness_supported": 0.96,
+  "retrieval_recall": 0.9464285714285714,
+  "context_recall": 0.875,
+  "citation_recall": 0.8392857142857143,
+  "mean_total_tokens": 1350.4545454545455,
+  "mean_raw_input_tokens": 2360.757575757576,
+  "mean_completion_tokens": 322.45454545454544,
+  "mean_precached_tokens": 1332.7575757575758,
+  "mean_chat_calls": 1.121212121212121,
+  "mean_steps": 0.9393939393939394,
+  "p50_latency_s": 5.31,
+  "p95_latency_s": 15.239999999999995,
+  "cost_per_request_rub": 0.8777954545454545,
+  "accepted": 25,
+  "cost_per_accepted_rub": 1.15869,
+  "total_cost_rub": 28.9672
+ },
+ "RAG-PLAN": {
+  "config_id": "RAG-PLAN",
+  "cases": 33,
+  "rows": 33,
+  "status_accuracy": 0.9090909090909091,
+  "contract_pass_rate": 0.7575757575757576,
+  "contract_pass_ci": [
+   0.6060606060606061,
+   0.9090909090909091
+  ],
+  "valid_rate": 0.9285714285714286,
+  "required_fact_recall": 0.8095238095238094,
+  "forbidden_fact_rate": 0.0,
+  "faithfulness_supported": 0.92,
+  "retrieval_recall": 0.8928571428571429,
+  "context_recall": 0.8392857142857143,
+  "citation_recall": 0.8035714285714286,
+  "mean_total_tokens": 1568.5454545454545,
+  "mean_raw_input_tokens": 2508.6060606060605,
+  "mean_completion_tokens": 395.5151515151515,
+  "mean_precached_tokens": 1335.5757575757575,
+  "mean_chat_calls": 2.0303030303030303,
+  "mean_steps": 1.5757575757575757,
+  "p50_latency_s": 8.25,
+  "p95_latency_s": 14.029999999999998,
+  "cost_per_request_rub": 1.0206121818181817,
+  "accepted": 25,
+  "cost_per_accepted_rub": 1.3472080799999997,
+  "total_cost_rub": 33.6802
+ }
+}

@@ -1,0 +1,936 @@
+[
+ {
+  "config": {
+   "config_id": "A",
+   "name": "A: baseline - агент, подробные промпты, финал по всей истории",
+   "architecture": "agent",
+   "model": "GigaChat-2-Max",
+   "retrieval_mode": "dense",
+   "top_k": 8,
+   "max_blocks": 12,
+   "min_score": null,
+   "merge_neighbors": false,
+   "auto_year_filter": false,
+   "planner": false,
+   "context_format": "verbose",
+   "prompt": "verbose",
+   "examples": 3,
+   "schema": "verbose",
+   "max_tokens": 1024,
+   "temperature": 0.01,
+   "max_attempts": 2,
+   "sc_samples": 1,
+   "agent_prompt": "verbose",
+   "tool_variant": "detailed",
+   "max_steps": 6,
+   "item_chars": 1000,
+   "agent_max_tokens": 300,
+   "finalize_from": "history",
+   "compaction": null,
+   "session_mode": "fresh",
+   "timestamp_in_prefix": false
+  },
+  "summary": {
+   "config_id": "A",
+   "cases": 33,
+   "rows": 66,
+   "status_accuracy": 0.9848484848484849,
+   "contract_pass_rate": 0.9242424242424242,
+   "contract_pass_ci": [
+    0.8636363636363636,
+    0.9848484848484849
+   ],
+   "valid_rate": 1.0,
+   "required_fact_recall": 0.943452380952381,
+   "forbidden_fact_rate": 0.0,
+   "faithfulness_supported": 1.0,
+   "retrieval_recall": 0.9821428571428571,
+   "context_recall": 0.9821428571428571,
+   "citation_recall": 0.9732142857142857,
+   "mean_total_tokens": 5781.19696969697,
+   "mean_raw_input_tokens": 11292.484848484848,
+   "mean_completion_tokens": 495.2878787878788,
+   "mean_precached_tokens": 6006.575757575758,
+   "mean_chat_calls": 4.409090909090909,
+   "mean_steps": 3.303030303030303,
+   "p50_latency_s": 10.46,
+   "p95_latency_s": 17.43,
+   "cost_per_request_rub": 3.7579178181818174,
+   "accepted": 61,
+   "cost_per_accepted_rub": 4.065943868852458,
+   "total_cost_rub": 248.0226
+  },
+  "accepted": true,
+  "reason": "baseline"
+ },
+ {
+  "config": {
+   "config_id": "B",
+   "name": "B: финальный ответ по состоянию (собранные фрагменты), а не по всей истории",
+   "architecture": "agent",
+   "model": "GigaChat-2-Max",
+   "retrieval_mode": "dense",
+   "top_k": 8,
+   "max_blocks": 12,
+   "min_score": null,
+   "merge_neighbors": false,
+   "auto_year_filter": false,
+   "planner": false,
+   "context_format": "verbose",
+   "prompt": "verbose",
+   "examples": 3,
+   "schema": "verbose",
+   "max_tokens": 1024,
+   "temperature": 0.01,
+   "max_attempts": 2,
+   "sc_samples": 1,
+   "agent_prompt": "verbose",
+   "tool_variant": "detailed",
+   "max_steps": 6,
+   "item_chars": 1000,
+   "agent_max_tokens": 300,
+   "finalize_from": "state",
+   "compaction": null,
+   "session_mode": "fresh",
+   "timestamp_in_prefix": false
+  },
+  "changed_fields": [
+   "finalize_from"
+  ],
+  "summary": {
+   "config_id": "B",
+   "cases": 33,
+   "rows": 33,
+   "status_accuracy": 1.0,
+   "contract_pass_rate": 0.8787878787878788,
+   "contract_pass_ci": [
+    0.7575757575757576,
+    0.9696969696969697
+   ],
+   "valid_rate": 0.9642857142857143,
+   "required_fact_recall": 0.9583333333333334,
+   "forbidden_fact_rate": 0.0,
+   "faithfulness_supported": 1.0,
+   "retrieval_recall": 0.9642857142857143,
+   "context_recall": 0.9642857142857143,
+   "citation_recall": 0.9642857142857143,
+   "mean_total_tokens": 5462.484848484848,
+   "mean_raw_input_tokens": 10208.272727272728,
+   "mean_completion_tokens": 468.45454545454544,
+   "mean_precached_tokens": 5214.242424242424,
+   "mean_chat_calls": 4.2727272727272725,
+   "mean_steps": 3.242424242424242,
+   "p50_latency_s": 9.11,
+   "p95_latency_s": 20.755999999999993,
+   "cost_per_request_rub": 3.5508315151515144,
+   "accepted": 29,
+   "cost_per_accepted_rub": 4.040601379310344,
+   "total_cost_rub": 117.1774
+  },
+  "accepted": true,
+  "reason": "Δтокены -474, Δкачество -3%",
+  "base": "A",
+  "regressions": [
+   {
+    "case_id": "G13",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "G14",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "L03",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "M01",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "M02",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   }
+  ]
+ },
+ {
+  "config": {
+   "config_id": "C",
+   "name": "C: очистка контекста: склейка соседей, порог с калибровки, не больше 4 окон, компактный формат",
+   "architecture": "agent",
+   "model": "GigaChat-2-Max",
+   "retrieval_mode": "dense",
+   "top_k": 8,
+   "max_blocks": 4,
+   "min_score": 0.741,
+   "merge_neighbors": true,
+   "auto_year_filter": false,
+   "planner": false,
+   "context_format": "compact",
+   "prompt": "verbose",
+   "examples": 3,
+   "schema": "verbose",
+   "max_tokens": 1024,
+   "temperature": 0.01,
+   "max_attempts": 2,
+   "sc_samples": 1,
+   "agent_prompt": "verbose",
+   "tool_variant": "detailed",
+   "max_steps": 6,
+   "item_chars": 1000,
+   "agent_max_tokens": 300,
+   "finalize_from": "state",
+   "compaction": null,
+   "session_mode": "fresh",
+   "timestamp_in_prefix": false
+  },
+  "changed_fields": [
+   "max_blocks",
+   "min_score",
+   "merge_neighbors",
+   "context_format"
+  ],
+  "summary": {
+   "config_id": "C",
+   "cases": 33,
+   "rows": 33,
+   "status_accuracy": 0.9393939393939394,
+   "contract_pass_rate": 0.8787878787878788,
+   "contract_pass_ci": [
+    0.7575757575757576,
+    0.9696969696969697
+   ],
+   "valid_rate": 1.0,
+   "required_fact_recall": 0.8869047619047619,
+   "forbidden_fact_rate": 0.0,
+   "faithfulness_supported": 1.0,
+   "retrieval_recall": 0.9642857142857143,
+   "context_recall": 0.9642857142857143,
+   "citation_recall": 0.9285714285714286,
+   "mean_total_tokens": 5072.0,
+   "mean_raw_input_tokens": 10981.30303030303,
+   "mean_completion_tokens": 479.54545454545456,
+   "mean_precached_tokens": 6388.848484848485,
+   "mean_chat_calls": 4.484848484848484,
+   "mean_steps": 3.393939393939394,
+   "p50_latency_s": 9.78,
+   "p95_latency_s": 19.102,
+   "cost_per_request_rub": 3.29691496969697,
+   "accepted": 29,
+   "cost_per_accepted_rub": 3.751661862068966,
+   "total_cost_rub": 108.7982
+  },
+  "accepted": true,
+  "reason": "Δтокены -390, Δкачество +0%",
+  "base": "B",
+  "regressions": [
+   {
+    "case_id": "G10",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "G13",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "G14",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "X03",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   }
+  ]
+ },
+ {
+  "config": {
+   "config_id": "D",
+   "name": "D: компактные инструкции генератора и агента",
+   "architecture": "agent",
+   "model": "GigaChat-2-Max",
+   "retrieval_mode": "dense",
+   "top_k": 8,
+   "max_blocks": 4,
+   "min_score": 0.741,
+   "merge_neighbors": true,
+   "auto_year_filter": false,
+   "planner": false,
+   "context_format": "compact",
+   "prompt": "compact",
+   "examples": 3,
+   "schema": "verbose",
+   "max_tokens": 1024,
+   "temperature": 0.01,
+   "max_attempts": 2,
+   "sc_samples": 1,
+   "agent_prompt": "compact",
+   "tool_variant": "detailed",
+   "max_steps": 6,
+   "item_chars": 1000,
+   "agent_max_tokens": 300,
+   "finalize_from": "state",
+   "compaction": null,
+   "session_mode": "fresh",
+   "timestamp_in_prefix": false
+  },
+  "changed_fields": [
+   "prompt",
+   "agent_prompt"
+  ],
+  "summary": {
+   "config_id": "D",
+   "cases": 33,
+   "rows": 33,
+   "status_accuracy": 0.9696969696969697,
+   "contract_pass_rate": 0.8787878787878788,
+   "contract_pass_ci": [
+    0.7575757575757576,
+    0.9696969696969697
+   ],
+   "valid_rate": 0.9642857142857143,
+   "required_fact_recall": 0.9285714285714286,
+   "forbidden_fact_rate": 0.0,
+   "faithfulness_supported": 1.0,
+   "retrieval_recall": 0.9821428571428571,
+   "context_recall": 0.9642857142857143,
+   "citation_recall": 0.9285714285714286,
+   "mean_total_tokens": 4428.090909090909,
+   "mean_raw_input_tokens": 8554.151515151516,
+   "mean_completion_tokens": 475.6969696969697,
+   "mean_precached_tokens": 4601.757575757576,
+   "mean_chat_calls": 4.303030303030303,
+   "mean_steps": 3.1818181818181817,
+   "p50_latency_s": 10.06,
+   "p95_latency_s": 23.266,
+   "cost_per_request_rub": 2.8784461818181817,
+   "accepted": 29,
+   "cost_per_accepted_rub": 3.27547324137931,
+   "total_cost_rub": 94.9887
+  },
+  "accepted": true,
+  "reason": "Δтокены -644, Δкачество +0%",
+  "base": "C",
+  "regressions": [
+   {
+    "case_id": "G10",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "G13",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "M01",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "M03",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   }
+  ]
+ },
+ {
+  "config": {
+   "config_id": "E",
+   "name": "E: примеры 3 -> 0",
+   "architecture": "agent",
+   "model": "GigaChat-2-Max",
+   "retrieval_mode": "dense",
+   "top_k": 8,
+   "max_blocks": 4,
+   "min_score": 0.741,
+   "merge_neighbors": true,
+   "auto_year_filter": false,
+   "planner": false,
+   "context_format": "compact",
+   "prompt": "compact",
+   "examples": 0,
+   "schema": "verbose",
+   "max_tokens": 1024,
+   "temperature": 0.01,
+   "max_attempts": 2,
+   "sc_samples": 1,
+   "agent_prompt": "compact",
+   "tool_variant": "detailed",
+   "max_steps": 6,
+   "item_chars": 1000,
+   "agent_max_tokens": 300,
+   "finalize_from": "state",
+   "compaction": null,
+   "session_mode": "fresh",
+   "timestamp_in_prefix": false
+  },
+  "changed_fields": [
+   "examples"
+  ],
+  "summary": {
+   "config_id": "E",
+   "cases": 33,
+   "rows": 33,
+   "status_accuracy": 0.9393939393939394,
+   "contract_pass_rate": 0.8484848484848485,
+   "contract_pass_ci": [
+    0.7272727272727273,
+    0.9696969696969697
+   ],
+   "valid_rate": 0.9285714285714286,
+   "required_fact_recall": 0.9107142857142857,
+   "forbidden_fact_rate": 0.0,
+   "faithfulness_supported": 1.0,
+   "retrieval_recall": 0.9821428571428571,
+   "context_recall": 0.9821428571428571,
+   "citation_recall": 0.9107142857142857,
+   "mean_total_tokens": 3996.969696969697,
+   "mean_raw_input_tokens": 6511.666666666667,
+   "mean_completion_tokens": 479.3636363636364,
+   "mean_precached_tokens": 2994.060606060606,
+   "mean_chat_calls": 4.363636363636363,
+   "mean_steps": 3.212121212121212,
+   "p50_latency_s": 12.15,
+   "p95_latency_s": 20.75,
+   "cost_per_request_rub": 2.5981915151515156,
+   "accepted": 28,
+   "cost_per_accepted_rub": 3.062154285714286,
+   "total_cost_rub": 85.7403
+  },
+  "accepted": true,
+  "reason": "Δтокены -431, Δкачество -3%",
+  "base": "D",
+  "regressions": [
+   {
+    "case_id": "G03",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "G13",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "G14",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   }
+  ]
+ },
+ {
+  "config": {
+   "config_id": "F",
+   "name": "F: компактная схема ответа",
+   "architecture": "agent",
+   "model": "GigaChat-2-Max",
+   "retrieval_mode": "dense",
+   "top_k": 8,
+   "max_blocks": 4,
+   "min_score": 0.741,
+   "merge_neighbors": true,
+   "auto_year_filter": false,
+   "planner": false,
+   "context_format": "compact",
+   "prompt": "compact",
+   "examples": 0,
+   "schema": "compact",
+   "max_tokens": 1024,
+   "temperature": 0.01,
+   "max_attempts": 2,
+   "sc_samples": 1,
+   "agent_prompt": "compact",
+   "tool_variant": "detailed",
+   "max_steps": 6,
+   "item_chars": 1000,
+   "agent_max_tokens": 300,
+   "finalize_from": "state",
+   "compaction": null,
+   "session_mode": "fresh",
+   "timestamp_in_prefix": false
+  },
+  "changed_fields": [
+   "schema"
+  ],
+  "summary": {
+   "config_id": "F",
+   "cases": 33,
+   "rows": 33,
+   "status_accuracy": 0.9090909090909091,
+   "contract_pass_rate": 0.7575757575757576,
+   "contract_pass_ci": [
+    0.6060606060606061,
+    0.9090909090909091
+   ],
+   "valid_rate": 1.0,
+   "required_fact_recall": 0.7916666666666666,
+   "forbidden_fact_rate": 0.0,
+   "faithfulness_supported": 0.92,
+   "retrieval_recall": 0.9464285714285714,
+   "context_recall": 0.9464285714285714,
+   "citation_recall": 0.875,
+   "mean_total_tokens": 4651.969696969697,
+   "mean_raw_input_tokens": 7426.757575757576,
+   "mean_completion_tokens": 308.1212121212121,
+   "mean_precached_tokens": 3082.909090909091,
+   "mean_chat_calls": 4.212121212121212,
+   "mean_steps": 3.242424242424242,
+   "p50_latency_s": 9.39,
+   "p95_latency_s": 17.514,
+   "cost_per_request_rub": 3.0239495757575763,
+   "accepted": 25,
+   "cost_per_accepted_rub": 3.9916134400000005,
+   "total_cost_rub": 99.7903
+  },
+  "accepted": false,
+  "reason": "качество упало на 9% (больше одного кейса)",
+  "base": "E",
+  "regressions": [
+   {
+    "case_id": "G03",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "G06",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "G14",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "G15",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "L01",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "M01",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "M02",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   }
+  ]
+ },
+ {
+  "config": {
+   "config_id": "G",
+   "name": "G: max_tokens по фактическому распределению выхода",
+   "architecture": "agent",
+   "model": "GigaChat-2-Max",
+   "retrieval_mode": "dense",
+   "top_k": 8,
+   "max_blocks": 4,
+   "min_score": 0.741,
+   "merge_neighbors": true,
+   "auto_year_filter": false,
+   "planner": false,
+   "context_format": "compact",
+   "prompt": "compact",
+   "examples": 0,
+   "schema": "verbose",
+   "max_tokens": 950,
+   "temperature": 0.01,
+   "max_attempts": 2,
+   "sc_samples": 1,
+   "agent_prompt": "compact",
+   "tool_variant": "detailed",
+   "max_steps": 6,
+   "item_chars": 1000,
+   "agent_max_tokens": 300,
+   "finalize_from": "state",
+   "compaction": null,
+   "session_mode": "fresh",
+   "timestamp_in_prefix": false
+  },
+  "changed_fields": [
+   "max_tokens"
+  ],
+  "summary": {
+   "config_id": "G",
+   "cases": 33,
+   "rows": 33,
+   "status_accuracy": 0.9393939393939394,
+   "contract_pass_rate": 0.8787878787878788,
+   "contract_pass_ci": [
+    0.7575757575757576,
+    0.9696969696969697
+   ],
+   "valid_rate": 0.9642857142857143,
+   "required_fact_recall": 0.9107142857142857,
+   "forbidden_fact_rate": 0.0,
+   "faithfulness_supported": 1.0,
+   "retrieval_recall": 0.9821428571428571,
+   "context_recall": 0.9821428571428571,
+   "citation_recall": 0.9464285714285714,
+   "mean_total_tokens": 3769.4242424242425,
+   "mean_raw_input_tokens": 6204.0,
+   "mean_completion_tokens": 471.6969696969697,
+   "mean_precached_tokens": 2906.2727272727275,
+   "mean_chat_calls": 4.2727272727272725,
+   "mean_steps": 3.1515151515151514,
+   "p50_latency_s": 12.02,
+   "p95_latency_s": 24.226,
+   "cost_per_request_rub": 2.450249212121212,
+   "accepted": 29,
+   "cost_per_accepted_rub": 2.7882146206896548,
+   "total_cost_rub": 80.8582
+  },
+  "accepted": true,
+  "reason": "Δтокены -228, Δкачество +3%",
+  "base": "E",
+  "regressions": [
+   {
+    "case_id": "G03",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "G13",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "G14",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   }
+  ]
+ },
+ {
+  "config": {
+   "config_id": "H",
+   "name": "H: агент получает фрагменты, обрезанные до 600 символов",
+   "architecture": "agent",
+   "model": "GigaChat-2-Max",
+   "retrieval_mode": "dense",
+   "top_k": 8,
+   "max_blocks": 4,
+   "min_score": 0.741,
+   "merge_neighbors": true,
+   "auto_year_filter": false,
+   "planner": false,
+   "context_format": "compact",
+   "prompt": "compact",
+   "examples": 0,
+   "schema": "verbose",
+   "max_tokens": 950,
+   "temperature": 0.01,
+   "max_attempts": 2,
+   "sc_samples": 1,
+   "agent_prompt": "compact",
+   "tool_variant": "detailed",
+   "max_steps": 6,
+   "item_chars": 600,
+   "agent_max_tokens": 300,
+   "finalize_from": "state",
+   "compaction": null,
+   "session_mode": "fresh",
+   "timestamp_in_prefix": false
+  },
+  "changed_fields": [
+   "item_chars"
+  ],
+  "summary": {
+   "config_id": "H",
+   "cases": 33,
+   "rows": 33,
+   "status_accuracy": 0.9393939393939394,
+   "contract_pass_rate": 0.8181818181818182,
+   "contract_pass_ci": [
+    0.6666666666666666,
+    0.9393939393939394
+   ],
+   "valid_rate": 0.9285714285714286,
+   "required_fact_recall": 0.875,
+   "forbidden_fact_rate": 0.0,
+   "faithfulness_supported": 1.0,
+   "retrieval_recall": 0.9464285714285714,
+   "context_recall": 0.9464285714285714,
+   "citation_recall": 0.9107142857142857,
+   "mean_total_tokens": 4717.424242424242,
+   "mean_raw_input_tokens": 8143.727272727273,
+   "mean_completion_tokens": 477.42424242424244,
+   "mean_precached_tokens": 3903.7272727272725,
+   "mean_chat_calls": 4.575757575757576,
+   "mean_steps": 3.4545454545454546,
+   "p50_latency_s": 12.71,
+   "p95_latency_s": 23.875999999999994,
+   "cost_per_request_rub": 3.066496303030303,
+   "accepted": 27,
+   "cost_per_accepted_rub": 3.747939925925926,
+   "total_cost_rub": 101.1944
+  },
+  "accepted": false,
+  "reason": "качество упало на 6% (больше одного кейса)",
+  "base": "G",
+  "regressions": [
+   {
+    "case_id": "G08",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "G12",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "G13",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "M02",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   }
+  ]
+ },
+ {
+  "config": {
+   "config_id": "I",
+   "name": "I: общая сессия внутри вопроса: кеш префикса",
+   "architecture": "agent",
+   "model": "GigaChat-2-Max",
+   "retrieval_mode": "dense",
+   "top_k": 8,
+   "max_blocks": 4,
+   "min_score": 0.741,
+   "merge_neighbors": true,
+   "auto_year_filter": false,
+   "planner": false,
+   "context_format": "compact",
+   "prompt": "compact",
+   "examples": 0,
+   "schema": "verbose",
+   "max_tokens": 950,
+   "temperature": 0.01,
+   "max_attempts": 2,
+   "sc_samples": 1,
+   "agent_prompt": "compact",
+   "tool_variant": "detailed",
+   "max_steps": 6,
+   "item_chars": 1000,
+   "agent_max_tokens": 300,
+   "finalize_from": "state",
+   "compaction": null,
+   "session_mode": "shared",
+   "timestamp_in_prefix": false
+  },
+  "changed_fields": [
+   "session_mode"
+  ],
+  "summary": {
+   "config_id": "I",
+   "cases": 33,
+   "rows": 33,
+   "status_accuracy": 0.9393939393939394,
+   "contract_pass_rate": 0.8787878787878788,
+   "contract_pass_ci": [
+    0.7575757575757576,
+    0.9696969696969697
+   ],
+   "valid_rate": 1.0,
+   "required_fact_recall": 0.875,
+   "forbidden_fact_rate": 0.0,
+   "faithfulness_supported": 0.9615384615384616,
+   "retrieval_recall": 0.9821428571428571,
+   "context_recall": 0.9821428571428571,
+   "citation_recall": 0.9464285714285714,
+   "mean_total_tokens": 3366.787878787879,
+   "mean_raw_input_tokens": 7366.0,
+   "mean_completion_tokens": 463.2121212121212,
+   "mean_precached_tokens": 4462.424242424242,
+   "mean_chat_calls": 4.2727272727272725,
+   "mean_steps": 3.1515151515151514,
+   "p50_latency_s": 12.9,
+   "p95_latency_s": 22.215999999999998,
+   "cost_per_request_rub": 2.1884973939393944,
+   "accepted": 29,
+   "cost_per_accepted_rub": 2.4903591034482764,
+   "total_cost_rub": 72.2204
+  },
+  "accepted": true,
+  "reason": "Δтокены -403, Δкачество +0%",
+  "base": "G",
+  "regressions": [
+   {
+    "case_id": "G13",
+    "было": 0.0,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "G15",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   }
+  ]
+ },
+ {
+  "config": {
+   "config_id": "FINAL",
+   "name": "FINAL: итоговая конфигурация (= I)",
+   "architecture": "agent",
+   "model": "GigaChat-2-Max",
+   "retrieval_mode": "dense",
+   "top_k": 8,
+   "max_blocks": 4,
+   "min_score": 0.741,
+   "merge_neighbors": true,
+   "auto_year_filter": false,
+   "planner": false,
+   "context_format": "compact",
+   "prompt": "compact",
+   "examples": 0,
+   "schema": "verbose",
+   "max_tokens": 950,
+   "temperature": 0.01,
+   "max_attempts": 2,
+   "sc_samples": 1,
+   "agent_prompt": "compact",
+   "tool_variant": "detailed",
+   "max_steps": 6,
+   "item_chars": 1000,
+   "agent_max_tokens": 300,
+   "finalize_from": "state",
+   "compaction": null,
+   "session_mode": "shared",
+   "timestamp_in_prefix": false
+  },
+  "summary": {
+   "config_id": "FINAL",
+   "cases": 33,
+   "rows": 66,
+   "status_accuracy": 0.9242424242424242,
+   "contract_pass_rate": 0.8181818181818182,
+   "contract_pass_ci": [
+    0.7272727272727273,
+    0.9090909090909091
+   ],
+   "valid_rate": 1.0,
+   "required_fact_recall": 0.8333333333333333,
+   "forbidden_fact_rate": 0.0,
+   "faithfulness_supported": 0.9803921568627451,
+   "retrieval_recall": 0.9642857142857143,
+   "context_recall": 0.9464285714285714,
+   "citation_recall": 0.9107142857142857,
+   "mean_total_tokens": 3234.7727272727275,
+   "mean_raw_input_tokens": 7082.787878787879,
+   "mean_completion_tokens": 417.77272727272725,
+   "mean_precached_tokens": 4265.787878787879,
+   "mean_chat_calls": 4.106060606060606,
+   "mean_steps": 3.090909090909091,
+   "p50_latency_s": 12.055,
+   "p95_latency_s": 21.2825,
+   "cost_per_request_rub": 2.102649575757576,
+   "accepted": 54,
+   "cost_per_accepted_rub": 2.5699050370370373,
+   "total_cost_rub": 138.7749
+  },
+  "accepted": true,
+  "reason": "повтор итоговой конфигурации I x2",
+  "regressions": [
+   {
+    "case_id": "G06",
+    "было": 1.0,
+    "стало": 0.5,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "G08",
+    "было": 1.0,
+    "стало": 0.5,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "G12",
+    "было": 1.0,
+    "стало": 0.5,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "G15",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "L03",
+    "было": 0.5,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "M02",
+    "было": 0.5,
+    "стало": 1.0,
+    "направление": "починилось"
+   },
+   {
+    "case_id": "M03",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   },
+   {
+    "case_id": "X03",
+    "было": 1.0,
+    "стало": 0.0,
+    "направление": "сломалось"
+   }
+  ]
+ }
+]

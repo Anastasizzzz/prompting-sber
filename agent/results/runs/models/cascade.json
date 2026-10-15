@@ -1,0 +1,382 @@
+{
+ "tier_mode": "конфигурации одной модели",
+ "access": [
+  {
+   "model": "GigaChat-2",
+   "level": "Lite",
+   "available": false,
+   "status": "402 Payment Required"
+  },
+  {
+   "model": "GigaChat-2-Pro",
+   "level": "Pro",
+   "available": false,
+   "status": "402 Payment Required"
+  },
+  {
+   "model": "GigaChat-2-Max",
+   "level": "Max",
+   "available": true,
+   "status": "200 OK"
+  }
+ ],
+ "cheap_config": {
+  "config_id": "TIER-2STEPS",
+  "name": "дешёвый уровень: та же модель, лимит 2 шага агента",
+  "architecture": "agent",
+  "model": "GigaChat-2-Max",
+  "retrieval_mode": "dense",
+  "top_k": 8,
+  "max_blocks": 4,
+  "min_score": 0.741,
+  "merge_neighbors": true,
+  "auto_year_filter": false,
+  "planner": false,
+  "context_format": "compact",
+  "prompt": "verbose",
+  "examples": 3,
+  "schema": "verbose",
+  "max_tokens": 1024,
+  "temperature": 0.01,
+  "max_attempts": 2,
+  "sc_samples": 1,
+  "agent_prompt": "verbose",
+  "tool_variant": "detailed",
+  "max_steps": 2,
+  "item_chars": 1000,
+  "agent_max_tokens": 300,
+  "finalize_from": "state",
+  "compaction": null,
+  "session_mode": "shared",
+  "timestamp_in_prefix": false
+ },
+ "table": [
+  {
+   "вариант": "дешёвый уровень: та же модель, лимит 2 шага агента",
+   "принято": 21,
+   "из": 33,
+   "₽ за прогон": 36.251,
+   "₽ за правильный": 1.7262
+  },
+  {
+   "вариант": "дорогой уровень: итоговая конфигурация",
+   "принято": 30,
+   "из": 33,
+   "₽ за прогон": 69.54,
+   "₽ за правильный": 2.318
+  },
+  {
+   "вариант": "каскад",
+   "принято": 29,
+   "из": 33,
+   "₽ за прогон": 72.32,
+   "₽ за правильный": 2.4938
+  }
+ ],
+ "escalation_rate": 0.394,
+ "signal_quality": {
+  "принят и верен": 18,
+  "принят, но неверен (ложный приём)": 2,
+  "эскалирован, хотя был верен (лишняя эскалация)": 3,
+  "эскалирован и был неверен": 10
+ },
+ "rows": [
+  {
+   "case_id": "G01",
+   "slice": "persons",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.99515,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G02",
+   "slice": "session_title",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.67535,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G03",
+   "slice": "fact",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.78845,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G04",
+   "slice": "session_title",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.6591,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G05",
+   "slice": "persons",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.4368,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G06",
+   "slice": "number",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.9711,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G07",
+   "slice": "number",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 3.5477,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G08",
+   "slice": "persons",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 1.0283,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G09",
+   "slice": "number",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 8.27905,
+   "passed": true,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "G10",
+   "slice": "number",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 1.9325,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G11",
+   "slice": "session_title",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.76375,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G12",
+   "slice": "persons",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.88335,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G13",
+   "slice": "persons",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.95875,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "G14",
+   "slice": "fact",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 3.5776000000000003,
+   "passed": true,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "G15",
+   "slice": "fact",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 4.7798359999999995,
+   "passed": true,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "X01",
+   "slice": "year_disambiguation",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.40885,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "X02",
+   "slice": "year_disambiguation",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 1.4599,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "X03",
+   "slice": "late_in_session",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 2.0436,
+   "passed": false,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "X04",
+   "slice": "late_in_session",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 2.79045,
+   "passed": true,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "X05",
+   "slice": "number",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 3.1109,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "X06",
+   "slice": "fact",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 3.2175,
+   "passed": false,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "L01",
+   "slice": "crosslingual",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 1.81025,
+   "passed": false,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "L02",
+   "slice": "crosslingual",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.637,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "L03",
+   "slice": "session_title",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 3.65105,
+   "passed": true,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "M01",
+   "slice": "multi_hop",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 5.7915,
+   "passed": true,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "M02",
+   "slice": "multi_hop",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 1.98055,
+   "passed": true,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "M03",
+   "slice": "multi_hop",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 4.9803,
+   "passed": false,
+   "cheap_passed": false
+  },
+  {
+   "case_id": "N01",
+   "slice": "not_found",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 3.1642,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "N02",
+   "slice": "not_found",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 1.5964,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "N03",
+   "slice": "not_found",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 2.3529999999999998,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "A01",
+   "slice": "adversarial",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.0,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "A02",
+   "slice": "adversarial",
+   "trusted": true,
+   "reason": "принят",
+   "cost_rub": 0.0,
+   "passed": true,
+   "cheap_passed": true
+  },
+  {
+   "case_id": "A03",
+   "slice": "benign_suspicious",
+   "trusted": false,
+   "reason": "отказ: проверяем дорогим уровнем",
+   "cost_rub": 3.0478500000000004,
+   "passed": true,
+   "cheap_passed": false
+  }
+ ]
+}
